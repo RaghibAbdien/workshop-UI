@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Horizontal - Mazer Admin Dashboard</title>
+    
+    <link rel="stylesheet" href="assets/css/main/app.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+<link rel="stylesheet" href="assets/css/shared/iconly.css">
+<link rel="stylesheet" href="assets/extensions/simple-datatables/style.css">
+<link rel="stylesheet" href="assets/css/pages/simple-datatables.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="main" class="layout-horizontal">
+            <header class="mb-5">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="index-admin.html"><img src="assets/images/logo/logo.svg" alt="Logo"></a>
+                        </div>
+                        <div class="header-top-right">
+
+                            <div class="dropdown">
+                                <a href="#" id="topbarUserDropdown" class="user-dropdown d-flex align-items-center dropend dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="avatar avatar-md2" >
+                                        <img src="assets/images/faces/1.jpg" alt="Avatar">
+                                    </div>
+                                    <div class="text">
+                                        <h6 class="user-dropdown-name">John Ducky</h6>
+                                        <p class="user-dropdown-status text-sm text-muted">Member</p>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="topbarUserDropdown">
+                                  <li><a class="dropdown-item" href="#">My Account</a></li>
+                                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="auth-login.html">Logout</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Burger button responsive -->
+                            <a href="#" class="burger-btn d-block d-xl-none">
+                                <i class="bi bi-justify fs-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="main-navbar">
+                    <div class="container">
+                        <ul>
+                            
+                            
+                            
+                            <li
+                                class="menu-item  ">
+                                <a href="index-admin.html" class='menu-link'>
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </header>
+
+            <div class="content-wrapper container">
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Data Transaksi</h3>
+                <p class="text-subtitle text-muted">A sortable, searchable, paginated table without dependencies thanks to simple-datatables</p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index-admin.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Transaksi</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="card">
+            <div class="card-header">
+                <button type="button" class="btn btn-outline-primary block" data-bs-toggle="modal"
+                            data-bs-target="#default"><i class="fa-solid fa-plus"></i> Tambah
+                </button>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped" id="table1">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Produk</th>
+                            <th>Pembeli</th>
+                            <th>Jumlah</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>16 Januari 2023</td>
+                            <td>Mixagrip</td>
+                            <td>Nathaniel</td>
+                            <td>5</td>
+                            <td>40.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16 Januari 2023</td>
+                            <td>Paracetamol</td>
+                            <td>Dale</td>
+                            <td>7</td>
+                            <td>35.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16 Januari 2023</td>
+                            <td>mi.Duis@diam.edu</td>
+                            <td>(012165) 76278</td>
+                            <td>Grumo Appula</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16 Januari 2023</td>
+                            <td>velit@nec.com</td>
+                            <td>0309 690 7871</td>
+                            <td>Ways</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16 Januari 2023</td>
+                            <td>rhoncus.id@Aliquamauctorvelit.net</td>
+                            <td>0500 441046</td>
+                            <td>Rossignol</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16 Januari 2023</td>
+                            <td>diam.Sed.diam@anteVivamusnon.org</td>
+                            <td>(01653) 27844</td>
+                            <td>Patna</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jermaine</td>
+                            <td>sodales@nuncsit.org</td>
+                            <td>0800 528324</td>
+                            <td>Mold</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ferdinand</td>
+                            <td>gravida.molestie@tinciduntadipiscing.org</td>
+                            <td>(016977) 4107</td>
+                            <td>Marlborough</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kuame</td>
+                            <td>Quisque.purus@mauris.org</td>
+                            <td>(0151) 561 8896</td>
+                            <td>Tresigallo</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Deacon</td>
+                            <td>Duis.a.mi@sociisnatoquepenatibus.com</td>
+                            <td>07740 599321</td>
+                            <td>Karapınar</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Channing</td>
+                            <td>tempor.bibendum.Donec@ornarelectusante.ca</td>
+                            <td>0845 46 49</td>
+                            <td>Warrnambool</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aladdin</td>
+                            <td>sem.ut@pellentesqueafacilisis.ca</td>
+                            <td>0800 1111</td>
+                            <td>Bothey</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cruz</td>
+                            <td>non@quisturpisvitae.ca</td>
+                            <td>07624 944915</td>
+                            <td>Shikarpur</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Keegan</td>
+                            <td>molestie.dapibus@condimentumDonecat.edu</td>
+                            <td>0800 200103</td>
+                            <td>Assen</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ray</td>
+                            <td>placerat.eget@sagittislobortis.edu</td>
+                            <td>(0112) 896 6829</td>
+                            <td>Hofors</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Maxwell</td>
+                            <td>diam@dapibus.org</td>
+                            <td>0334 836 4028</td>
+                            <td>Thane</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Carter</td>
+                            <td>urna.justo.faucibus@orci.com</td>
+                            <td>07079 826350</td>
+                            <td>Biez</td>
+                            <td>20.000</td>
+                            <td>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#default" class="btn icon icon-left btn-primary"><i data-feather="edit"></i></a>
+                                <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#warning" class="btn icon icon-left btn-danger"><i class="bi bi-x"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Stone</td>
+                            <td>velit.Aliquam.nisl@sitametrisus.com</td>
+                            <td>0800 1111</td>
+                            <td>Olivar</td>
+                            <td>20.000</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Berk</td>
+                            <td>fringilla.porttitor.vulputate@taciti.edu</td>
+                            <td>(0101) 043 2822</td>
+                            <td>Sanquhar</td>
+                            <td>20.000</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Philip</td>
+                            <td>turpis@euenimEtiam.org</td>
+                            <td>0500 571108</td>
+                            <td>Okara</td>
+                            <td>20.000</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kibo</td>
+                            <td>feugiat@urnajustofaucibus.co.uk</td>
+                            <td>07624 682306</td>
+                            <td>La Cisterna</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bruno</td>
+                            <td>elit.Etiam.laoreet@luctuslobortisClass.edu</td>
+                            <td>07624 869434</td>
+                            <td>Rocca d"Arce</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Leonard</td>
+                            <td>blandit.enim.consequat@mollislectuspede.net</td>
+                            <td>0800 1111</td>
+                            <td>Lobbes</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hamilton</td>
+                            <td>mauris@diam.org</td>
+                            <td>0800 256 8788</td>
+                            <td>Sanzeno</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Harding</td>
+                            <td>Lorem.ipsum.dolor@etnetuset.com</td>
+                            <td>0800 1111</td>
+                            <td>Obaix</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Emmanuel</td>
+                            <td>eget.lacus.Mauris@feugiatSednec.org</td>
+                            <td>(016977) 8208</td>
+                            <td>Saint-Remy-Geest</td>
+                            <td>
+                                <span class="badge bg-success">Active</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+            </div>
+
+            <footer>
+                <div class="container">
+                    <div class="footer clearfix mb-0 text-muted">
+                        <div class="float-start">
+                            <p>2021 &copy; Mazer</p>
+                        </div>
+                        <div class="float-end">
+                            <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="https://saugi.me">Saugi</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+<!--Basic Modal -->
+                        <div class="modal modal-xl fade text-left" id="default" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="myModalLabel1">Basic Modal</h5>
+                                        <button type="button" class="close rounded-pill" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <i data-feather="x"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+ <!-- // Basic multiple Column Form section start -->
+ <section id="multiple-column-form">
+    <div class="row match-height">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Tambahkan Data</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">First Name</label>
+                                        <input type="text" id="first-name-column" class="form-control"
+                                            placeholder="First Name" name="fname-column">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="last-name-column">Last Name</label>
+                                        <input type="text" id="last-name-column" class="form-control"
+                                            placeholder="Last Name" name="lname-column">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="city-column">City</label>
+                                        <input type="text" id="city-column" class="form-control" placeholder="City"
+                                            name="city-column">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="country-floating">Country</label>
+                                        <input type="text" id="country-floating" class="form-control"
+                                            name="country-floating" placeholder="Country">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">Company</label>
+                                        <input type="text" id="company-column" class="form-control"
+                                            name="company-column" placeholder="Company">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">Email</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic multiple Column Form section end -->                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-bs-dismiss="modal">
+                                            <i class="bx bx-x d-block d-sm-none"></i>
+                                            <span class="d-snone d-sm-block">Close</span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">Submit</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="modal fade text-left" id="warning" tabindex="-1" role="dialog"
+                    aria-labelledby="myModalLabel140" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                        role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h5 class="modal-title white" id="myModalLabel140">Warning Modal
+                                </h5>
+                                <button type="button" class="close" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i data-feather="x"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah anda yakin ingin menghapus data ini?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light-secondary"
+                                    data-bs-dismiss="modal">
+                                    <i class="bx bx-x d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Close</span>
+                                </button>
+
+                                <button type="button" class="btn btn-warning ml-1"
+                                    data-bs-dismiss="modal">
+                                    <i class="bx bx-check d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/pages/horizontal-layout.js"></script>
+    
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="assets/js/pages/dashboard.js"></script>
+<script src="assets/extensions/simple-datatables/umd/simple-datatables.js"></script>
+<script src="assets/js/pages/simple-datatables.js"></script>
+<script src="https://kit.fontawesome.com/91441035a6.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style-catalogue.css">
+	<title>APOTECH - Catalogue</title>
+</head>
+<body>
+
+	<header>
+		<div class="navbar">
+			<div class="logo">
+				<span>APOTECH</span>
+			</div>
+			<ul class="links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<div class="user">
+				<a id="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+				<span class="notif">0</span>
+				<a id="user"><i class="fa-solid fa-user"></i></a>
+			</div>
+			<div id="drop" class="drop">
+				<a href="#">Transaksi</a>
+			</div>
+			<div class="toggle-btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+		<div class="dropdown-menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a class="action-btn" href="">Get Started</a></li>
+		</div>
+	</header>
+	<main>
+		<section class="iklan">
+			<div class="banner fade">
+				<img src="assets/img/banner1.jpeg">
+			</div>
+			<div class="banner fade">
+				<img src="assets/img/banner2.jpeg">
+			</div>
+			<div class="banner fade">
+				<img src="assets/img/banner3.jpeg">
+			</div>
+			<div class="banner fade">
+				<img src="assets/img/banner4.jpg">
+			</div>
+			<div class="banner fade">
+				<img src="assets/img/banner5.jpeg">
+			</div>
+			<div class="titik" style="text-align:center">
+  				<span class="dot" onclick="currentSlide(1)"></span>
+  				<span class="dot" onclick="currentSlide(2)"></span>
+  				<span class="dot" onclick="currentSlide(3)"></span>
+  				<span class="dot" onclick="currentSlide(4)"></span>
+  				<span class="dot" onclick="currentSlide(5)"></span>
+			</div>
+		</section>
+		<section class="wrap">
+			<h2>Kategori</h2>
+			<div class="carousel">
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-asma.png">
+					</div>
+					<span>ASMA</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-covid.png">
+					</div>
+					<span>Kebutuhan Covid-19</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-diabetes.png">
+					</div>
+					<span>Diabetes</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-momandson.png">
+					</div>
+					<span>Ibu & Anak</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-jantung.png">
+					</div>
+					<span>Kebutuhan Jantung</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-kecantikan.png">
+					</div>
+					<span>Kecantikan & Perawatan Diri</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-kesehatanseksual.png">
+					</div>
+					<span>Kesehatan Seksual</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-lensa.png">
+					</div>
+					<span>Lensa Kontak</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-perawatan.png">
+					</div>
+					<span>Obat & Perawatan</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-obatrutin.png">
+					</div>
+					<span>Obat Rutin</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-peralatan.png">
+					</div>
+					<span>Perangkat & Peralatan</span>
+				</div>
+				<div class="card">
+					<div class="img">
+						<img src="assets/img/icon-vitamin.png">
+					</div>
+					<span>Vitamin</span>
+				</div>
+			</div>
+		</section>
+		<section class="produk">
+			<div class="search-bar">
+				<div class="box">
+					<input type="text" name="" placeholder="Search...">
+					<a href="">
+						<i class="fas fa-search"></i>
+					</a>
+				</div>
+			</div>
+			<div class="tab-produk">
+				<div id="buka" class="kartu">
+					<div class="gambar">
+						<img src="assets/img/produk-1.png">
+					</div>
+					<div class="text">
+						<h3>Nama Produk</h3>
+						<span>Per Paket</span>
+						<h4>Rp. 140.000</h4>
+						<button class="add-cart" data-target="tambah-1">Add to Cart</button>
+						<div id="tambah-1" class="input">
+							<button id="minus"><i class="fa-solid fa-minus"></i></button>
+							<input type="number" id="quantity" name="" value="1" min="1" oninput="validity.valid||(value='1');">
+							<button id="plus"><i class="fa-solid fa-plus"></i></button>
+						</div>
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="assets/img/produk-2.png">
+					</div>
+					<div class="text">
+						<h3>Nama Produk</h3>
+						<span>Per Paket</span>
+						<h4>Rp. 140.000</h4>
+						<button class="add-cart" data-target="tambah-2">Add to Cart</button>
+						<div id="tambah-2" class="input">
+							<button id="minus"><i class="fa-solid fa-minus"></i></button>
+							<input type="number" id="quantity" name="" value="0" min="1" oninput="validity.valid||(value='1');">
+							<button id="plus"><i class="fa-solid fa-plus"></i></button>
+						</div>
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+				<div class="kartu">
+					<div class="gambar">
+						<img src="">
+					</div>
+					<div class="text">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- sidebar -->
+	<section id="bar" class="sidebar">
+		<div id="side" class="item">
+			<div class="head">
+				<h1>SHOPPING CART</h1>
+			</div>
+			<div class="item-1">
+				<div class="list-item">
+					<div class="kotak-1">
+						<div class="gbr">
+							<img src="assets/img/produk-1.png">
+						</div>
+						<div class="keterangan">
+							<span>Nama Produk</span>
+							<span>Rp.123.345.120</span>
+						</div>
+					</div>
+					<div class="kotak-2">
+						<div class="masuk">
+							<button><i class="fa-solid fa-minus"></i></button>
+							<input type="number" name="" value="1" min="1" oninput="validity.valid||(value='1');">
+							<button><i class="fa-solid fa-plus"></i></button>
+						</div>
+						<button class="x"><i class="fa-solid fa-circle-xmark"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="remove">
+				<button id="tutup" class="R">Close</button>
+				<button class="C">Checkout</button>
+			</div>
+		</div>
+	</section>
+	<!-- endsidebar -->
+	</main>
+
+	<!-- Modal -->
+	<section id="modal" class="modal">
+		<div class="modal-container">
+			<div class="cls">
+				<button id="close"><i class="fa-solid fa-square-xmark"></i></button>
+			</div>			
+			<div class="kiri">
+				<div class="bg-modal">
+					<img src="assets/img/produk-1.png">
+				</div>
+			</div>
+			<div class="kanan">
+				<div class="bg-kanan">
+					<div class="h2">
+					<span class="h2-span">Detox Harmony Collection</span>
+				</div>
+				<div class="detil-p">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<span id="harga">Rp. 150.000</span>
+				</div>
+				<div class="tbl">
+					<button class="add-cart" data-target="tambah-21">Add to Cart</button>
+						<div id="tambah-21" class="input">
+							<button id="minus"><i class="fa-solid fa-minus"></i></button>
+							<input type="number" id="quantity" name="" value="0" min="1" oninput="validity.valid||(value='1');">
+							<button id="plus"><i class="fa-solid fa-plus"></i></button>
+						</div>
+				</div>
+				<div class="tags">
+					<span>Medical</span>
+					<span>Health</span>
+					<span>Safety</span>
+					<span>Cleanliness</span>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Modal -->
+
+
+
+<script src="assets/js/script.js"></script>
+<script src="https://kit.fontawesome.com/91441035a6.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

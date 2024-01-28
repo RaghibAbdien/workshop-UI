@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style-hist-transaction.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+	<title>APOTECH - HISTORY TRANSACTION</title>
+</head>
+<body>
+	<header>
+		<div class="navbar-">
+			<div class="logo">
+				<span>APOTECH</span>
+			</div>
+			<ul class="links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<div class="user">
+				<a id="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+				<span class="notif">0</span>
+				<a id="user"><i class="fa-solid fa-user"></i></a>
+			</div>
+			<div id="drop" class="drop">
+				<a href="#">Transaksi</a>
+			</div>
+			<div class="toggle-btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+		<div class="dropdown-menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a class="action-btn" href="">Get Started</a></li>
+		</div>
+	</header>
+	<main>
+		<!-- sidebar -->
+	<section id="bar" class="sidebar">
+		<div id="side" class="item">
+			<div class="head">
+				<h1>SHOPPING CART</h1>
+			</div>
+			<div class="item-1">
+				<div class="list-item">
+					<div class="kotak-1">
+						<div class="gbr">
+							<img src="assets/img/produk-1.png">
+						</div>
+						<div class="keterangan">
+							<span>Nama Produk</span>
+							<span>Rp.123.345.120</span>
+						</div>
+					</div>
+					<div class="kotak-2">
+						<div class="masuk">
+							<button><i class="fa-solid fa-minus"></i></button>
+							<input type="number" name="" value="1" min="1" oninput="validity.valid||(value='1');">
+							<button><i class="fa-solid fa-plus"></i></button>
+						</div>
+						<button class="x"><i class="fa-solid fa-circle-xmark"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="remove">
+				<button id="tutup" class="R">Close</button>
+				<button class="C">Checkout</button>
+			</div>
+		</div>
+	</section>
+	<!-- endsidebar -->
+
+
+	<section id="tabel">
+		<h2>History Transaksi</h2>
+		<table id="myTable" class="display">
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>Produk</th>
+					<th>Satuan</th>
+					<th>Jumlah</th>
+					<th>Total Harga</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1.</td>
+					<td>Paracetamol</td>
+					<td>Kapsul</td>
+					<td>5</td>
+					<td>100.000</td>
+					<td>Lunas</td>
+				</tr>
+				<tr>
+					<td>2.</td>
+					<td>Amoksisilin kapsul 250 mg</td>
+					<td>ktk 10 x 10 kapsul</td>
+					<td>2</td>
+					<td>75.000</td>
+					<td>Lunas</td>
+				</tr>
+				<tr>
+					<td>3.</td>
+					<td>Ibuprofen tablet 200 mg</td>
+					<td>btl 100 tablet</td>
+					<td>3</td>
+					<td>75.000</td>
+					<td>Lunas</td>
+				</tr>
+				<tr>
+					<td>4.</td>
+					<td>Kloramfenikol kapsul 250 mg</td>
+					<td>btl 250 kapsul</td>
+					<td>1</td>
+					<td>180.000</td>
+					<td>Dikirim</td>
+				</tr>
+				<tr>
+					<td>5.</td>
+					<td>Tramadol kapsul 50 mg</td>
+					<td>ktk 5 x 10 kapsul</td>
+					<td>1</td>
+					<td>100.000</td>
+					<td>Lunas</td>
+				</tr>
+				<tr>
+					<td>6.</td>
+					<td>Intravenous immunoglobulin</td>
+					<td>10 persen 25 ml infus</td>
+					<td>1</td>
+					<td>3.960.000</td>
+					<td>Belum Lunas</td>
+				</tr>
+				<tr>
+					<td>7.</td>
+					<td>Remdesivir</td>
+					<td>100 mg injeksi</td>
+					<td>2</td>
+					<td>1.020.000</td>
+					<td>Lunas</td>
+				</tr>
+				<tr>
+					<td>8.</td>
+					<td>Kotak P3K</td>
+					<td>Barang/Peralatan</td>
+					<td>3</td>
+					<td>900.000</td>
+					<td>Lunas</td>
+				</tr>
+				<tr>
+					<td>9.</td>
+					<td>Hansaplast Rol Kertas</td>
+					<td>2.5 cm x 5 m</td>
+					<td>5</td>
+					<td>125.000</td>
+					<td>Dikirim</td>
+				</tr>
+				<tr>
+					<td>10.</td>
+					<td>Beurer Manset Peralatan Medis</td>
+					<td>XL</td>
+					<td>3</td>
+					<td>960.000</td>
+					<td>Belum Lunas</td>
+				</tr>
+				<tr>
+					<td>11.</td>
+					<td>Autocheck GCU Alat Cek Gula Darah with Strip - Hitam</td>
+					<td>Barang/Peralatan</td>
+					<td>2</td>
+					<td>360.000</td>
+					<td>Lunas</td>
+				</tr>
+				<tr>
+					<td>12.</td>
+					<td>Panadol</td>
+					<td>Kapsul</td>
+					<td>5</td>
+					<td>100.000</td>
+					<td>Lunas</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	</main>
+</body>
+
+<script src="assets/js/transaksi.js"></script>
+<script src="https://kit.fontawesome.com/91441035a6.js" crossorigin="anonymous"></script>
+</html>
