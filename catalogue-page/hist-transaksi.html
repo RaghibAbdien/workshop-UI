@@ -23,9 +23,9 @@
 				<span>APOTECH</span>
 			</div>
 			<ul class="links">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../article-page/tech-index.html">Artikel</a></li>
+				<li><a href="index.html">Produk</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
 			<div class="user">
@@ -202,6 +202,19 @@
 	</main>
 </body>
 
+<script type="text/javascript">
+	const toggleBtn = document.querySelector('.toggle-btn');
+		const toggleBtnIcon = document.querySelector('.toggle-btn i');
+		const dropdownMenu = document.querySelector('.dropdown-menu');
+
+		toggleBtn.onclick = function(){
+			dropdownMenu.classList.toggle('open');
+			const isOpen = dropdownMenu.classList.contains('open');
+
+
+			toggleBtnIcon.classList = isOpen?'fa-solid fa-xmark':'fa-solid fa-bars';
+		}
+</script>
 <script src="assets/js/transaksi.js"></script>
 <script src="https://kit.fontawesome.com/91441035a6.js" crossorigin="anonymous"></script>
 </html>

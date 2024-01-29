@@ -197,7 +197,7 @@ h5 {
 }
 
 .footer {
-    background-color: #000000;
+    background-color: #5B9BF3;
     background-image: none;
 }
 
@@ -206,11 +206,11 @@ h5 {
 }
 
 .footer p {
-    color: #999999 !important;
+    color: #303030 !important;
 }
 
 .footer a {
-    color: #999999 !important;
+    color: #303030 !important;
 }
 
 .footer .link-widget li {
